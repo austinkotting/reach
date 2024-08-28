@@ -11,26 +11,5 @@ Reach establishes two new processing algorithms for QGIS: Join by transit time (
 
 Known issues:
 	In "Select by transit time", the layer on which you intend to select items should have a unique name within the project. If the layer name is not unique, the plugin will select the features with the "correct" IDs from the first layer it finds with the matching name, which can lead to random features on an unexpected layer being selected.
-  	Open Route Services will not return wheelchair travel time information for all pairs of points, if it considers one or both to be fundamentally imaccessible to wheelchair users.
-
-
-
-
-
-
-Plugin contents:
-
-Python scripts:
-	__init__.py
-	getapi.py
-	proxjoin_algorithm.py
-	proxselect_algorithm.py
-	reach.py
-	reach_provider.py
-
-Text:
-	metadata.txt
-
-Images:
-	join_icon.png
-	select_icon.png
+  	
+   	Open Route Services will not return wheelchair travel time information for all pairs of points, if it considers one or both to be fundamentally imaccessible to wheelchair users.
