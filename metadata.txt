@@ -1,0 +1,8 @@
+[general]
+name=Reach
+email=kotting@au-st.in
+author=Austin Kotting
+qgisMinimumVersion=3.0
+description=Enables the use of real transit time as a spatial predicate for selects and joins.
+about=tbd
+version=0.0.2
