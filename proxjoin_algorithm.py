@@ -205,7 +205,7 @@ class TransitJoinAlgorithm(QgsProcessingAlgorithm):
         self.addParameter(
             QgsProcessingParameterString(
                 self.FIELD_PREFIX,
-                description=self.tr('Prefix for joined fields (underscore will be automatically added'),
+                description=self.tr('Prefix for joined fields (underscore will be automatically added)'),
                 optional=True,
                 defaultValue=r'Joined'
             )
@@ -551,8 +551,7 @@ class TransitJoinAlgorithm(QgsProcessingAlgorithm):
                 'DISCARD_NONMATCHING': True
             }
             new = processing.run("native:joinattributestable", params)['OUTPUT']
-            #rec('new layer exists, line 536')
-            #tempJName = fieldPrefix + 'temp_j'
+            new = processing.run("native:reprojectlayer", {'INPUT': new,'TARGET_CRS': inputLay.sourceCrs(),'OUTPUT': 'memory:'})['OUTPUT']
             idxTempJoinPost = new.fields().indexFromName('temp_j')
             new.dataProvider().deleteAttributes([idxTempInput, idxTempJoinPost])
             new.updateFields()
