@@ -4,5 +4,5 @@ email=kotting@au-st.in
 author=Austin Kotting
 qgisMinimumVersion=3.0
 description=Enables the use of real transit time as a spatial predicate for selects and joins.
-about=tbd
+about=Reach is a plugin for QGIS which allows selections and joins based on estimated travel time between points on one layer and points on another layer. It is intended to augment the existing QGIS Spatial Join and Select by Location features, allowing connections to be made not simply based on cartographic distance, but based on a "real" measure of how reachable one place is from another.
 version=0.0.2
